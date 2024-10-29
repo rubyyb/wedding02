@@ -477,7 +477,8 @@ a {
 #cont04 .inner .traffic .car {
     margin-top: 20px;
 }
-#cont04 .inner .traffic .bus div p {
+#cont04 .inner .traffic .bus div p,
+#cont04 .inner .traffic .car div p {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 0.9rem;
