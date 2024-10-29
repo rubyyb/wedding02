@@ -483,6 +483,10 @@ a {
     margin-bottom: 10px;
     font-size: 0.9rem;
 }
+#cont04 .inner .traffic .bus div,
+#cont04 .inner .traffic .car div {
+    margin-top: 15px;
+}
 
 
 @media screen and (max-width:375px) {
