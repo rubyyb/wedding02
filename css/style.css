@@ -37,6 +37,10 @@ body {
     font-family: var(--font-kr);
 }
 
+a {
+    color: inherit;
+}
+
 #wrap {
     max-width: 26rem;
     margin: 0 auto;
@@ -425,6 +429,59 @@ body {
     content: none !important;
 }
 
+#cont04 {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+#cont04 .inner {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+}
+#cont04 .inner h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+#cont04 .inner .location {
+    margin: 30px 0;
+}
+#cont04 .inner .location h2 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+#cont04 .inner .location p {
+    font-size: 1rem;
+}
+#daumRoughmapContainer1730163576462 {
+    width: 100% !important;
+}
+.place-card {
+    display: none !important;
+}
+#cont04 .inner .traffic {
+    margin-left: 30px;
+    text-align: left;
+    margin-top: 30px;
+}
+#cont04 .inner .traffic h1 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+#cont04 .inner .traffic span {
+    font-size: 0.9rem;
+}
+#cont04 .inner .traffic .bus,
+#cont04 .inner .traffic .free_bus,
+#cont04 .inner .traffic .car {
+    margin-top: 20px;
+}
+#cont04 .inner .traffic .bus div p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
 
 
 @media screen and (max-width:375px) {

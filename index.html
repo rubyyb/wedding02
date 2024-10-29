@@ -10,9 +10,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="/styles/vendor/jquery.fancybox.min.css">
 
+    <!-- 팬시박스 / 제이쿼리 -->
     <script src="/scripts/vendor/jquery.fancybox.min.js"></script>
     <script src="./lib/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <!-- 카카오지도 -->
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+    <!-- 만든 스크립트 -->
     <script src="js/wedding.js"></script>
     <script src="js/header.js"></script>
     <script src="js/scroll.js"></script>
@@ -355,6 +361,52 @@
 
                 </div><!-- inner -->
             </section><!-- cont03 -->
+
+            <section id="cont04">
+                <div class="inner">
+                    <h1>오시는 길</h1>
+
+                    <div class="location">
+                        <h2>센텀사이언스파크 23층 스카이홀</h2>
+                        <p>부산 해운대구 센텀중앙로 79</p>
+                    </div><!-- location -->
+
+                    <div id="daumRoughmapContainer1730163576462" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+                    <div class="traffic">
+                        <div class="subway">
+                            <h1>지하철</h1>
+
+                            <span>• 2호선 센텀시티역 6번출구(도보 800m 직진)</span>
+                        </div><!-- subway -->
+
+                        <div class="bus">
+                            <h1>버스</h1>
+
+                            <div>
+                                <span>• 센텀시티역 벡스코 하차</span>
+                                <p>- 5-1, 39, 40, 63, 141, 155, 1001, 1002, 107</p>
+                            </div>
+                            <div>
+                                <span>• SK텔레콤 정류소 하차</span>
+                                <p>- 115, 181, 307, 해운대구 3-1, 해운대구 3-2</p>
+                            </div>
+                        </div><!-- bus -->
+
+                        <div class="free_bus">
+                            <h1>셔틀 운행</h1>
+
+                            <span>• 센텀시티역 4번출구 앞 셔틀버스 운행(15분 간격)</span>
+                        </div><!-- free_bus -->
+
+                        <div class="car">
+                            <h1>주차</h1>
+
+                            <span>• 웨딩홀 건물 만차시 옆 knn 주차장 이용</span>
+                        </div><!-- car -->
+                    </div><!-- traffic -->
+                </div><!-- inner -->
+            </section><!-- cont04 -->
         </main><!-- main -->
     </div><!-- wrap end -->
 
@@ -381,6 +433,13 @@
         Fancybox.bind("[data-fancybox]", {
 
         })
+
+        new daum.roughmap.Lander({
+            "timestamp" : "1730163576462",
+            "key" : "2m37k",
+            "mapWidth" : "640",
+            "mapHeight" : "360"
+        }).render();
     </script>
 </body>
 </html>
