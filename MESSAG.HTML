@@ -11,13 +11,50 @@
         }
         #t1,
         #list > div {
-            width: 100%;
             border: 1px solid black;
             margin: 20px ;
         }
+
+        #list {
+            width: 400px;
+            height: 500px;
+            padding: 10px;
+        }
+
+        #f {
+            position: fixed; /* 화면 중앙에 위치하기 위해 고정 */
+            top: 50%; /* 세로 중앙 */
+            left: 50%; /* 가로 중앙 */
+            transform: translate(-50%, -50%); /* 정확히 중앙에 맞추기 위한 변환 */
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* 다른 요소 위에 표시 */
+            width: 300px;
+            text-align: center;
+        }
+
+        #btn {
+            width: 100%;
+        }
+        #writer_btn {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        #writer_btn button {
+            width: 100%;
+            background-color: inherit;
+            border: 1px solid #333;
+            cursor: pointer;
+        }
+
     </style>
 
     <script>
+
         let cnt = 1;
         function a() {
             let writer = f.writer.value;
@@ -28,8 +65,71 @@
             list.appendChild(el);
             f.writer.value = "";
             f.pwd.value = "";
-            f.conten.value = "";
+            f.content.value = "";
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("DOMContentLoaded 실행됨"); // 확인로그
+
+            function btn() {
+                let writerBtn = document.getElementById("writer_btn");
+                let f = document.getElementById("f");
+                let closeBtn = document.getElementById("close_btn");
+                let submitBtn = document.getElementById("submit_btn");
+
+                // 요소가 제대로 로드되었는지 확인
+                console.log("writerBtn:", writerBtn);
+                console.log("f:", f);
+                console.log("closeBtn:", closeBtn);
+                console.log("submitBtn:", submitBtn);
+
+                // 요소가 없을 경우 중단
+                if (!writerBtn || !f || !closeBtn || !submitBtn) {
+                    console.error("필요한 요소 중 하나를 찾을 수 없습니다.");
+                    return;
+                }
+
+                // 팝업 표시/숨기기 토글
+                writerBtn.addEventListener("click", () => {
+                    if (getComputedStyle(f).display === 'none') {
+                        f.style.display = 'block';
+                    } else {
+                        f.style.display = 'none';
+                    }
+                });
+
+                // 닫기 버튼 클릭 시 팝업 숨기기
+                closeBtn.addEventListener('click', () => {
+                    f.style.display = 'none';
+                });
+
+                // 작성 버튼 클릭 시 유효성 검사
+                submitBtn.addEventListener('click', (event) => {
+                    console.log("작성버튼 클릭됨"); 
+                    if (!validateForm()) {
+                        event.preventDefault(); // 유효성 검사 실패 시 기본 동작 막기
+                    }
+                });
+
+                function validateForm() {
+                    let writer = document.getElementById("writer").value;
+                    let content = document.getElementById("content").value;
+                    let pwd = document.getElementById("pwd").value;
+
+                    console.log("유효성 검사 실행됨");
+                    if (writer === "" || content === "" || pwd === "") {
+                        alert("모든 필드를 입력해 주세요");
+                        return false; // 필드가 비어있을 경우 false 반환하여 동작 중단
+                    } else {
+                        alert("메세지가 작성되었습니다");
+                        return true; // 모든 필드가 채워졌을 경우 true 반환
+                    }
+                }
+            }
+
+            btn();
+        });
+
 
         //  글을 쓰고 난 뒤 만들어지는 새 div 를 지칭
         function mkDiv(writer, pwd, content) {
@@ -95,7 +195,10 @@
 <body>
     <h1>방명록</h1>
 
-    <form name="f">
+    <form name="f" id="f" style="display: none;">
+
+        <span id="close_btn" style="position: absolute; top: 10px; right: 10px; cursor: pointer; font-size: 24px;">&times;</span>
+
         <table id="t1">
             <tr>
                 <th>작성자</th>
@@ -115,14 +218,15 @@
                     <input type="password" name="pwd" id="pwd">
                 </td>
             </tr>
-
-            <tr>
-                <th>작성</th>
-                <td>
-                    <input type="button" value="작성" onclick="a()">
-                </td>
-            </tr>
         </table><!-- t1 -->
+
+        <table id="btn">
+            <tr>
+                <th>
+                    <input type="button" value="작성" onclick="a()" id="submit_btn">
+                </th>
+            </tr>
+        </table>
     </form><!-- f -->
 
     <div id="list"></div>
@@ -155,5 +259,11 @@
             </td>
         </tr>
     </table><!-- editf -->
+
+    <div id="writer_btn">
+        <button>
+            메세지 남기기
+        </button>
+    </div><!-- writer_btn -->
 </body>
 </html>
