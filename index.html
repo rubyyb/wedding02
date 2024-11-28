@@ -22,6 +22,7 @@
     <script src="js/wedding.js"></script>
     <script src="js/header.js"></script>
     <script src="js/scroll.js"></script>
+    <script src="js/cont05_popup.js"></script>
 
 </head>
 <body>
@@ -54,6 +55,7 @@
         </header><!-- header end -->
 
         <main id="main">
+            <!-- 소개 -->
             <section id="cont01" class="fade-in">
                 <div class="cont01_img">
                     <figure>
@@ -187,6 +189,7 @@
                 </div><!-- call_popup -->
             </section><!-- cont01 end -->
 
+            <!-- 달력 -->
             <section id="cont02" class="fade-in">
                 <div class="inner">
                     <h1>THE WEDDING DAY</h1>
@@ -272,7 +275,8 @@
                 </div><!-- inner -->
             </section><!-- cont02 -->
 
-            <section id="cont03">
+            <!-- 갤러리 -->
+            <section id="cont03" class="fade-in">
                 <div class="inner">
                     <p>갤러리</p>
 
@@ -362,7 +366,8 @@
                 </div><!-- inner -->
             </section><!-- cont03 -->
 
-            <section id="cont04">
+            <!-- 갤러리 -->
+            <section id="cont04" class="fade-in">
                 <div class="inner">
                     <h1>오시는 길</h1>
 
@@ -412,10 +417,52 @@
                 </div><!-- inner -->
             </section><!-- cont04 -->
 
-            <section id="cont05">
+            <!-- 방명록 -->
+            <section id="cont05" class="fade-in">
                 <h1>방명록</h1>
-                
-                
+
+                <div id="text_none">
+                    <p>아직 작성된 방명록이 없습니다.<br />첫 방명록을 작성해주세요.</p>
+                </div><!-- text_none -->
+
+                <div id="cont05_btn">
+                    <button>
+                        <p>글쓰기</p>
+                    </button>
+                </div><!-- pop_btn -->
+
+                <div id="cont05_popup" style="display: none;">
+                    <p>방명록 작성</p>
+
+                    <div class="popup_text">
+                        <div class="pop pop_name">
+                            <p>성함</p>
+                            <input type="text" id="name" style="height: 30px;" required>
+                        </div><!-- pop_name -->
+
+                        <div class="pop pop_msg">
+                            <p>내용</p>
+                            <input type="message" style="height: 100px;" rows="5" required>
+                        </div><!-- pop_name -->
+
+                        <div class="pop pop_pwd">
+                            <p>비밀번호</p>
+                            <input type="password" id="password" style="height: 30px;" required>
+                        </div><!-- pop_name -->
+                    </div><!-- popup_text -->
+
+                    <div class="pop_btn">
+                        <button>
+                            <p>작성</p>
+                        </button>
+                    </div>
+
+                    <div class="pop_icon">
+                        <figure>
+                            <img src="img/close.png" alt="popup_close">
+                        </figure>
+                    </div><!-- pop_icon -->
+                </div><!-- cont05_popup -->
             </section><!-- cont05 -->
         </main><!-- main -->
     </div><!-- wrap end -->
