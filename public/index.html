@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>김동명, 남예빈 결혼식 초대합니다.</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <link rel="stylesheet" href="/styles/vendor/jquery.fancybox.min.css" />
+
+    <!-- 팬시박스 / 제이쿼리 -->
+    <script src="/scripts/vendor/jquery.fancybox.min.js"></script>
+    <script src="./lib/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <!-- 카카오지도 -->
+    <script
+      charset="UTF-8"
+      class="daum_roughmap_loader_script"
+      src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
+    ></script>
+
+    <!-- 만든 스크립트 -->
+    <script src="js/wedding.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/cont05_popup.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="inner">
+          <div class="header_text">
+            <p>THE WEDDING OF</p>
+
+            <div class="header_name">
+              <p>김동명</p>
+              <p>그리고</p>
+              <p>남예빈</p>
+            </div>
+          </div>
+          <!-- header_text -->
+
+          <div class="header_img">
+            <p></p>
+          </div>
+          <!-- header_img -->
+
+          <div class="header_last">
+            <h1 class="header_love">Love Begins Today</h1>
+
+            <div class="header_day">
+              <p>2024년 3월 8일 오후 2시 30분</p>
+              <p>센텀사이언스파크 23층 스카이홀</p>
+            </div>
+          </div>
+          <!-- header_last -->
+        </div>
+        <!-- inner -->
+      </header>
+      <!-- header end -->
+
+      <main id="main">
+        <!-- 소개 -->
+        <section id="cont01" class="fade-in">
+          <div class="cont01_img">
+            <figure>
+              <img src="img/wedding.png" alt="" />
+            </figure>
+          </div>
+          <!-- cont01_img -->
+
+          <div class="cont01_text">
+            <div class="text01">
+              그 어떤 <span>동</span>행으로도 표현할 수 없이<br />
+              서로에게 <span>명</span>확히 다가온 사랑은 참 아름답습니다.<br />
+              주님이 우리에게 주신 하루하루라는 선물을<br />
+              함께 풀어보며 <span>예</span>쁜 사랑과 <span>빈</span>틈없는
+              믿음으로<br />
+              아름답게 살아가겠습니다.<br />
+            </div>
+            <!-- text01 -->
+
+            <div class="text02">
+              <p><span>김환순 • 서혜자</span> 의 차남 <span>김동명</span></p>
+              <p><span>남진원 • 박미정</span> 의 장녀 <span>남예빈</span></p>
+            </div>
+            <!-- text02 -->
+          </div>
+          <!-- cont01_text -->
+
+          <div class="call">
+            <button>
+              <p>연락하기</p>
+            </button>
+          </div>
+          <!-- call -->
+
+          <div class="call_popup" style="display: none">
+            <div class="inner">
+              <div class="popup_header">
+                <p>연락하기</p>
+              </div>
+              <!-- popup_header -->
+
+              <div class="popup_text">
+                <div class="popup_sx">
+                  <div>
+                    <span>신랑</span>
+                    <span>김동명</span>
+                    <span>
+                      <a>
+                        <figure class="popup_call">
+                          <img src="img/call_2.png" alt="전화하기" />
+                        </figure>
+                        <figure>
+                          <img src="img/massege.png" alt="문자하기" />
+                        </figure>
+                      </a>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span>신랑 아버지</span>
+                    <span>김환순</span>
+                    <span>
+                      <a>
+                        <figure class="popup_call">
+                          <img src="img/call_2.png" alt="전화하기" />
+                        </figure>
+                        <figure>
+                          <img src="img/massege.png" alt="문자하기" />
+                        </figure>
+                      </a>
+                    </span>
+                  </div>
+
+                  <div class="last">
+                    <span>신랑 어머니</span>
+                    <span>서혜자</span>
+                    <span>
+                      <a>
+                        <figure class="popup_call">
+                          <img src="img/call_2.png" alt="전화하기" />
+                        </figure>
+                        <figure>
+                          <img src="img/massege.png" alt="문자하기" />
+                        </figure>
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <!-- man -->
+
+                <div class="popup_sx">
+                  <div>
+                    <span>신부</span>
+                    <span>남예빈</span>
+                    <span>
+                      <a>
+                        <figure class="popup_call">
+                          <img src="img/call_2.png" alt="전화하기" />
+                        </figure>
+                        <figure>
+                          <img src="img/massege.png" alt="문자하기" />
+                        </figure>
+                      </a>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span>신부 아버지</span>
+                    <span>남진원</span>
+                    <span>
+                      <a>
+                        <figure class="popup_call">
+                          <img src="img/call_2.png" alt="전화하기" />
+                        </figure>
+                        <figure>
+                          <img src="img/massege.png" alt="문자하기" />
+                        </figure>
+                      </a>
+                    </span>
+                  </div>
+
+                  <div class="last_2">
+                    <span>신부 어머니</span>
+                    <span>박미정</span>
+                    <span>
+                      <a>
+                        <figure class="popup_call">
+                          <img src="img/call_2.png" alt="전화하기" />
+                        </figure>
+                        <figure>
+                          <img src="img/massege.png" alt="문자하기" />
+                        </figure>
+                      </a>
+                    </span>
+                  </div>
+                </div>
+                <!-- man -->
+              </div>
+              <!-- popup_text -->
+            </div>
+            <!-- inner -->
+          </div>
+          <!-- call_popup -->
+        </section>
+        <!-- cont01 end -->
+
+        <!-- 달력 -->
+        <section id="cont02" class="fade-in">
+          <div class="inner">
+            <h1>THE WEDDING DAY</h1>
+
+            <div class="month">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
+            <!-- month -->
+
+            <div class="month_2">
+              <div class="month_text">
+                <span class="red">일</span>
+                <span>월</span>
+                <span>화</span>
+                <span>수</span>
+                <span>목</span>
+                <span>금</span>
+                <span>토</span>
+              </div>
+              <!-- month_text -->
+
+              <div class="month_day">
+                <div class="day day_1">
+                  <span class="red">1</span>
+                </div>
+                <!-- day_1 -->
+
+                <div class="day day_2">
+                  <span class="red">2</span>
+                  <span class="red">3</span>
+                  <span>4</span>
+                  <span>5</span>
+                  <span>6</span>
+                  <span>7</span>
+                  <span class="wedding">8</span>
+                  <p class="heart">
+                    <img src="img/love.png" alt="" />
+                  </p>
+                </div>
+                <!-- day_2 -->
+
+                <div class="day day_3">
+                  <span class="red">9</span>
+                  <span>10</span>
+                  <span>11</span>
+                  <span>12</span>
+                  <span>13</span>
+                  <span>14</span>
+                  <span>15</span>
+                </div>
+                <!-- day_3 -->
+
+                <div class="day day_4">
+                  <span class="red">16</span>
+                  <span>17</span>
+                  <span>18</span>
+                  <span>19</span>
+                  <span>20</span>
+                  <span>21</span>
+                  <span>22</span>
+                </div>
+                <!-- day_4 -->
+
+                <div class="day day_5">
+                  <span class="red">23</span>
+                  <span>24</span>
+                  <span>25</span>
+                  <span>26</span>
+                  <span>27</span>
+                  <span>28</span>
+                  <span>29</span>
+                </div>
+                <!-- day_5 -->
+
+                <div class="day day_6">
+                  <span class="red">30</span>
+                  <span>31</span>
+                </div>
+                <!-- day_6 -->
+              </div>
+              <!-- month_day -->
+            </div>
+            <!-- month_2 -->
+
+            <div class="wedding_day">
+              <h2>우리의 예식까지 남은 시간</h2>
+              <h3 id="remain-time"></h3>
+            </div>
+            <!-- wedding_day -->
+          </div>
+          <!-- inner -->
+        </section>
+        <!-- cont02 -->
+
+        <!-- 갤러리 -->
+        <section id="cont03" class="fade-in">
+          <div class="inner">
+            <p>갤러리</p>
+
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="img/gallery_1.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_1.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_2.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_2.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_3.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_3.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_4.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_4.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_5.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_5.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_6.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_6.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_7.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_7.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_8.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_8.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_9.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_9.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_010.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_010.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_016.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_016.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_012.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_012.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_013.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_013.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_014.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_014.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+                <div class="swiper-slide">
+                  <a href="img/gallery_015.jpg" data-fancybox="gallery">
+                    <img src="img/gallery_015.jpg" alt="" />
+                  </a>
+                </div>
+                <!-- swiper-slide -->
+              </div>
+              <!-- swiper-wrapper -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <!-- inner -->
+        </section>
+        <!-- cont03 -->
+
+        <!-- 갤러리 -->
+        <section id="cont04" class="fade-in">
+          <div class="inner">
+            <h1>오시는 길</h1>
+
+            <div class="location">
+              <h2>센텀사이언스파크 23층 스카이홀</h2>
+              <p>부산 해운대구 센텀중앙로 79</p>
+            </div>
+            <!-- location -->
+
+            <div
+              id="daumRoughmapContainer1730163576462"
+              class="root_daum_roughmap root_daum_roughmap_landing"
+            ></div>
+
+            <div class="traffic">
+              <div class="subway">
+                <h1>지하철</h1>
+
+                <span>• 2호선 센텀시티역 6번출구(도보 800m 직진)</span>
+              </div>
+              <!-- subway -->
+
+              <div class="bus">
+                <h1>버스</h1>
+
+                <div>
+                  <span>• 센텀시티역 벡스코 하차</span>
+                  <p>- 5-1, 39, 40, 63, 141, 155, 1001, 1002, 107</p>
+                </div>
+                <div>
+                  <span>• SK텔레콤 정류소 하차</span>
+                  <p>- 115, 181, 307, 해운대구 3-1, 해운대구 3-2</p>
+                </div>
+              </div>
+              <!-- bus -->
+
+              <div class="free_bus">
+                <h1>셔틀 운행</h1>
+
+                <span>• 센텀시티역 4번출구 앞 셔틀버스 운행(15분 간격)</span>
+              </div>
+              <!-- free_bus -->
+
+              <div class="car">
+                <h1>주차</h1>
+
+                <span>• 웨딩홀 주차장</span>
+                <div>
+                  <span>• knn 외부 주차장 이용가능</span>
+                  <p>- 식사 여부 관계 없이 3시간 지원</p>
+                </div>
+              </div>
+              <!-- car -->
+            </div>
+            <!-- traffic -->
+          </div>
+          <!-- inner -->
+        </section>
+        <!-- cont04 -->
+
+        <!-- 방명록 -->
+        <!-- cont05 -->
+
+        <section id="guestbook">
+          <h2>방명록</h2>
+
+          <!-- 방명록 작성 폼 -->
+          <form id="guestbook-form">
+            <div>
+              <label for="name">이름:</label>
+              <input type="text" id="name" maxlength="10" required />
+              <p id="name-char-count">0/10</p>
+            </div>
+            <div>
+              <label for="password">비밀번호:</label>
+              <input type="password" id="password" maxlength="20" required />
+              <p id="password-char-count">0/20</p>
+            </div>
+            <div>
+              <label for="message">메시지:</label>
+              <textarea id="message" maxlength="200" required></textarea>
+              <p id="message-char-count">0/200</p>
+            </div>
+            <button type="submit">작성</button>
+          </form>
+
+          <!-- 방명록 목록 -->
+          <div id="guestbook-list"></div>
+          <div id="pagination-container"></div>
+        </section>
+
+        <!-- 비밀번호 확인 모달 -->
+        <div id="password-modal" style="display: none">
+          <div class="modal-content">
+            <h3>비밀번호 확인</h3>
+            <input
+              type="password"
+              id="modal-password"
+              placeholder="비밀번호 입력"
+            />
+            <button id="confirm-delete">확인</button>
+            <button id="cancel-delete">취소</button>
+          </div>
+        </div>
+      </main>
+      <!-- main -->
+    </div>
+    <!-- wrap end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      Fancybox.bind("[data-fancybox]", {});
+
+      new daum.roughmap.Lander({
+        timestamp: "1730163576462",
+        key: "2m37k",
+        mapWidth: "640",
+        mapHeight: "360",
+      }).render();
+    </script>
+
+    <script type="module">
+      import { setupInputListeners } from "./js/main.js";
+      import {
+        submitGuestbook,
+        displayGuestbookWithCustomPagination,
+        listGuestbook,
+        deleteGuestbook,
+      } from "./js/firebase.js";
+
+      // 입력 리스너 설정
+      setupInputListeners();
+
+      const guestbookForm = document.getElementById("guestbook-form");
+      const guestbookList = document.getElementById("guestbook-list");
+      const passwordModal = document.getElementById("password-modal");
+      const modalPassword = document.getElementById("modal-password");
+      const confirmDelete = document.getElementById("confirm-delete");
+      const cancelDelete = document.getElementById("cancel-delete");
+
+      let currentDeleteId = null; // 삭제할 항목의 ID 저장
+
+      // 방명록 작성 이벤트
+      guestbookForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("name").value;
+        const message = document.getElementById("message").value;
+        const password = document.getElementById("password").value;
+
+        if (name && message && password) {
+          submitGuestbook(name, message, password, (success) => {
+            if (success) {
+              alert("방명록이 저장되었습니다!");
+              guestbookForm.reset();
+            } else {
+              alert("방명록 저장에 실패했습니다. 다시 시도해주세요.");
+            }
+          });
+        } else {
+          alert("모든 필드를 입력해주세요!");
+        }
+      });
+
+      // 방명록 표시 함수
+      function displayGuestbook(messages) {
+        guestbookList.innerHTML = ""; // 기존 목록 초기화
+        if (messages.length > 0) {
+          messages.forEach((msg) => {
+            const item = document.createElement("div");
+            item.innerHTML = `
+        <p><strong>${msg.name}</strong> - ${msg.timestamp}</p>
+        <p>${msg.message}</p>
+        <button class="delete-button" onclick="openDeleteModal('${msg.id}')">X</button>
+      `;
+            guestbookList.appendChild(item);
+          });
+        } else {
+          guestbookList.innerHTML =
+            "<p>방명록이 비어 있습니다. 첫 글을 작성해 주세요!</p>";
+        }
+      }
+
+      // 삭제 버튼 클릭 시 모달 열기
+      window.openDeleteModal = (id) => {
+        currentDeleteId = id; // 삭제할 항목의 ID 저장
+        modalPassword.value = ""; // 입력 필드 초기화
+        passwordModal.style.display = "flex"; // 모달 열기
+      };
+
+      // 모달의 확인 버튼 클릭 시 삭제 실행
+      confirmDelete.addEventListener("click", () => {
+        const password = modalPassword.value;
+        if (currentDeleteId && password) {
+          deleteGuestbook(currentDeleteId, password, (success) => {
+            if (success) {
+              alert("방명록이 삭제되었습니다!");
+            } else {
+              alert("비밀번호가 일치하지 않습니다.");
+            }
+            passwordModal.style.display = "none"; // 모달 닫기
+          });
+        }
+      });
+
+      // 모달의 취소 버튼 클릭 시 모달 닫기
+      cancelDelete.addEventListener("click", () => {
+        passwordModal.style.display = "none"; // 모달 닫기
+      });
+
+      // 방명록 데이터 가져오기 및 렌더링
+      listGuestbook((messages) => {
+        if (messages.length > 0) {
+          displayGuestbookWithCustomPagination(messages);
+        } else {
+          const guestbookList = document.getElementById("guestbook-list");
+          guestbookList.innerHTML =
+            "<p>방명록이 비어 있습니다. 첫 글을 작성해 주세요!</p>";
+        }
+      });
+    </script>
+  </body>
+</html>
