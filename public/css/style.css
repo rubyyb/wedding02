@@ -21,6 +21,12 @@
   --font-kr: "HakgyoansimBadasseugiTTF-L";
   --font-en: "Cafe24Lovingu";
 }
+@font-face {
+  font-family: 'Cafe24Lovingu';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Lovingu.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   margin: 0;
@@ -76,8 +82,101 @@ a {
   background-color: #fff;
   text-align: center;
   margin: 0 auto;
+  background-color: #ffe8db;
+  position: relative;
 }
-#header .header_text {
+#header .inner figure {
+  width: 100%;
+  height: auto;
+}
+#header .inner figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.drawsvg,svg {
+  width: 100%;
+  height: 249px;
+}
+
+.stroke {
+  font-size: 45px;
+  stroke: #493628; 
+  stroke-width: 1px; 
+  stroke-dasharray: 0 250;
+  stroke-opacity: 1; 
+  fill: none;
+  -webkit-animation: 
+  stroke_offset 8s infinite;
+  animation: stroke_offset 8s infinite;
+  -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+  animation-timing-function: cubic-bezier(.25, .46, .45, .94)
+}
+
+.fill {
+  font-size: 45px;
+  fill: #493628;
+  fill-opacity: 0;
+  -webkit-animation: fill_offset 8s infinite;
+  animation: fill_offset 8s infinite;
+  -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+  animation-timing-function: cubic-bezier(.25, .46, .45, .94)
+}
+
+@-webkit-keyframes stroke_offset {
+  100%, 25% {stroke-dasharray: 0 250; stroke-opacity: 1
+  }
+  50%, 75% {stroke-dasharray: 250 0; stroke-opacity: .75
+  }
+  55%, 70% {stroke-dasharray: 250 0; stroke-opacity: 0
+  }
+}
+
+@keyframes stroke_offset {
+  100%, 25% {stroke-dasharray: 0 250; stroke-opacity: 1
+  }
+  50%, 75% {stroke-dasharray: 250 0; stroke-opacity: .75
+  }
+  55%, 70% {stroke-dasharray: 250 0; stroke-opacity: 0
+  }
+}
+
+@-webkit-keyframes fill_offset {
+    100%, 25%, 35%, 90% {
+        fill-opacity: 0
+    }
+    50%, 70% {
+        fill-opacity: 1
+    }
+}
+
+@keyframes fill_offset {
+    100%, 25%, 35%, 90% {
+        fill-opacity: 0
+    }
+    50%, 70% {
+        fill-opacity: 1
+    }
+}
+.drawsvg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -208px;
+  z-index: 200000;
+}
+#fade-text {
+  font-family: 'Cafe24Lovingu', cursive; font-size: 4em;
+  font-weight: bold;
+}
+#particles-js {
+  width: 100%;
+  height: auto;
+}
+
+
+/* #header .header_text {
   font-size: 1rem;
   padding: 40px 0 0;
 }
@@ -125,7 +224,7 @@ a {
 }
 #header .header_last .header_day p:first-child {
   margin-bottom: 5px;
-}
+} */
 
 /* ❤️❤️❤️main❤️❤️❤️ */
 #main {
@@ -395,7 +494,7 @@ a {
   align-items: center;
 }
 #cont03 .inner .swiper-slide img {
-  width: 100%;
+  width: 89%;
   object-fit: cover;
   border-radius: 10px;
   overflow: hidden;
@@ -426,11 +525,11 @@ a {
   font-size: 0.8rem;
   bottom: 15px !important;
 }
-
 .swiper-button-next::after,
 .swiper-button-prev:after {
   content: none !important;
 }
+
 
 #cont04 {
   width: 100%;
@@ -491,99 +590,112 @@ a {
   margin-top: 15px;
 }
 
-#cont05 {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 50px 0;
-}
-#cont05 h1 {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-#text_none p {
-  padding: 100px 0;
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-#cont05_btn button {
-  width: 36%;
-  height: 2.5rem;
-  background-color: inherit;
-  border-radius: 5px;
-  border: 1px solid #777;
-  font: inherit;
-  cursor: pointer;
-}
-#cont05_btn button p {
-  font-size: 1rem;
-}
-#cont05_popup {
-  width: 85%;
-  margin: 0 auto;
-  padding: 30px 35px;
-  background-color: #fff;
-  border-radius: 10px;
-  position: relative;
-}
-#cont05_popup p {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-#cont05_popup .popup_text .pop p {
-  margin-bottom: 0;
-  text-align: left;
-}
-#cont05_popup .popup_text .pop input {
-  width: 100%;
-  margin-bottom: 20px;
-  margin-top: 15px;
-}
-#cont05_popup .pop_btn {
-  width: 60%;
-  margin: 0 auto;
-}
-#cont05_popup .pop_btn button {
-  width: 100%;
-  height: 2.5rem;
-  background-color: #edcbb2;
-  font-family: inherit;
-  border-radius: 5px;
-  border: 1px solid #fff;
-}
-#cont05_popup .pop_btn button p {
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 0.3rem;
-  color: #fff;
-}
-#cont05_popup .pop_icon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
+/* 방명록 */
 #guestbook {
   margin: 20px auto;
   max-width: 600px;
   padding: 20px;
-  border: 1px solid #ddd;
-  background-color: #f9f9f9;
+  border: 1px solid #ffe8db;
+  background-color: inherit;
 }
-/* 방명록 */
+#guestbook h1 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#first_text .first_btn {
+  width: 150px;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #777;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#first_text button p {
+  font-size: 1rem;
+  margin: 0 !important;
+}
+/* 방명록 작성란 */
+
 #guestbook-form {
+  width: 25%;
+  height: 448px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff; /* 반투명 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 5px;
 }
-
+#guestbook-form h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
 #guestbook-form div {
+  width: 80%;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ffdcb6;
+}
+#guestbook-form div input {
+  width: 72.5%;
+  height: 25px;
+}
+#guestbook-form div textarea {
+  width: 73%;
+  height: 100px;
+}
+#guestbook-form div:nth-child(2) {
+  padding-top: 15px;
+  border-top: 1px solid #ffdcb6;
+}
+#guestbook-form div:nth-child(2) label {
+  font-size: 1rem;
+  letter-spacing: 0.5rem;
+}
+#guestbook-form div:nth-child(3) label {
+  font-size: 1rem;
+  margin-right: 8px;
+}
+#guestbook-form div:nth-child(4) label {
+  font-size: 1rem;
+  margin-right: 5px;
+  letter-spacing: 0.35em !important;
+}
+#guestbook-form div:nth-child(4) div {
+  width: 100% !important;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: none;
+}
+#name-char-count, #password-char-count, #message-char-count {
+  text-align: end;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+#name-char-count, #password-char-count {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
-
-#guestbook-list {
-  margin-top: 20px;
+#close-btn {
+  width: 34%;
+  height: 35px;
+  background-color: transparent;
+  border: 1px solid #777;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .guestbook-item {
@@ -640,6 +752,11 @@ a {
   background-color: #ccc;
   color: #000;
 }
+#password-modal h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
 /* 방명록 스타일 */
 #guestbook-list {
   margin: 20px 0;
@@ -648,6 +765,8 @@ a {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  text-align: center;
 }
 
 .guestbook-item {
@@ -657,6 +776,8 @@ a {
   border-radius: 8px;
   background-color: #fdfdfd;
   transition: all 0.3s ease;
+  text-align: start;
+  position: relative;
 }
 
 .guestbook-item:hover {
@@ -666,6 +787,7 @@ a {
 
 .guestbook-item p {
   margin: 0;
+  margin-bottom: 10px;
   font-size: 14px;
   color: #333;
 }
@@ -675,7 +797,7 @@ a {
   color: #007bff;
 }
 
-.delete-button {
+#first_text .delete-button {
   background: #ff4d4d;
   color: white;
   border: none;
@@ -684,9 +806,12 @@ a {
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
-.delete-button:hover {
+#first_text .delete-button:hover {
   background: #d93636;
 }
 
@@ -726,6 +851,73 @@ a {
   color: #999;
   cursor: not-allowed;
 }
+
+/* cont06 */
+#cont06 {
+  background-color: #fff;
+  margin: 0 auto;
+  text-align: center;
+}
+#cont06 .inner {
+  padding: 50px 0;
+}
+#cont06 .inner h1 {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+#cont06 .inner p {
+  margin: 30px 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+#cont06 .inner .man_dropdown {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: inline-block;
+}
+#cont06 .inner .man_dropdown button {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  text-align: left;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+#cont06 .inner .man_dropdown p {
+  margin: 0;
+}
+.dropdown-content {
+  display: none; /* 숨김 상태 */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* 드롭다운 콘텐츠 링크에 대한 호버 효과 */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+/* 드롭다운 버튼을 호버할 때 콘텐츠 표시 */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.man_son {
+  width: 100%;
+}
+
 
 /* 반응형 */
 @media screen and (max-width: 375px) {

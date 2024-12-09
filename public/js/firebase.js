@@ -137,6 +137,16 @@ export function displayGuestbookWithCustomPagination(messages) {
   // 방명록 항목 렌더링
   function renderGuestbookItems() {
     guestbookList.innerHTML = ""; // 초기화
+
+    if (messages.length === 0) {
+      // 메시지가 없을 경우 초기 메시지 표시
+      const emptyMessage = document.createElement("p");
+      emptyMessage.className = "empty-message";
+      emptyMessage.textContent = "아직 작성된 방명록이 없습니다.<br>방명록을 작성해주세요.";
+      guestbookList.appendChild(emptyMessage);
+      return; // 이후 코드를 실행하지 않음
+    }
+
     const start = (currentPage - 1) * itemsPerPage;
     const end = start + itemsPerPage;
     const currentItems = messages.slice(start, end);

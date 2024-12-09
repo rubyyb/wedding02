@@ -16,3 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log('Element with id "cont05" not found');
   }
 });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const openButton = document.querySelector("#first_text button");
+    const modal = document.querySelector("#guestbook-form");
+    const closeModal = document.querySelector("#close-btn");
+
+    // 모달 열기
+    openButton.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
+
+    // 모달 닫기
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    // 모달 외부 클릭 시 닫기
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
+
