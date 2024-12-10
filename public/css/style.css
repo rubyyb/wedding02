@@ -7,13 +7,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Cafe24Lovingu";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Lovingu.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
 
 @import url("//fastly.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css");
 
@@ -22,8 +15,9 @@
   --font-en: "Cafe24Lovingu";
 }
 @font-face {
-  font-family: 'Cafe24Lovingu';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Lovingu.woff2') format('woff2');
+  font-family: "Cafe24Lovingu";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Lovingu.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -67,7 +61,7 @@ a {
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 /* 화면에 나타날 때 적용될 상태 */
@@ -95,69 +89,95 @@ a {
   object-fit: cover;
 }
 
-.drawsvg,svg {
+.drawsvg,
+svg {
   width: 100%;
   height: 249px;
 }
 
 .stroke {
   font-size: 45px;
-  stroke: #493628; 
-  stroke-width: 1px; 
+  stroke: #fff;
+  stroke-width: 1px;
   stroke-dasharray: 0 250;
-  stroke-opacity: 1; 
+  stroke-opacity: 1;
   fill: none;
-  -webkit-animation: 
-  stroke_offset 8s infinite;
+  -webkit-animation: stroke_offset 8s infinite;
   animation: stroke_offset 8s infinite;
-  -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
-  animation-timing-function: cubic-bezier(.25, .46, .45, .94)
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .fill {
   font-size: 45px;
-  fill: #493628;
+  fill: #ff5454;
   fill-opacity: 0;
   -webkit-animation: fill_offset 8s infinite;
   animation: fill_offset 8s infinite;
-  -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
-  animation-timing-function: cubic-bezier(.25, .46, .45, .94)
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 @-webkit-keyframes stroke_offset {
-  100%, 25% {stroke-dasharray: 0 250; stroke-opacity: 1
+  100%,
+  25% {
+    stroke-dasharray: 0 250;
+    stroke-opacity: 1;
   }
-  50%, 75% {stroke-dasharray: 250 0; stroke-opacity: .75
+  50%,
+  75% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: 0.75;
   }
-  55%, 70% {stroke-dasharray: 250 0; stroke-opacity: 0
+  55%,
+  70% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: 0;
   }
 }
 
 @keyframes stroke_offset {
-  100%, 25% {stroke-dasharray: 0 250; stroke-opacity: 1
+  100%,
+  25% {
+    stroke-dasharray: 0 250;
+    stroke-opacity: 1;
   }
-  50%, 75% {stroke-dasharray: 250 0; stroke-opacity: .75
+  50%,
+  75% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: 0.75;
   }
-  55%, 70% {stroke-dasharray: 250 0; stroke-opacity: 0
+  55%,
+  70% {
+    stroke-dasharray: 250 0;
+    stroke-opacity: 0;
   }
 }
 
 @-webkit-keyframes fill_offset {
-    100%, 25%, 35%, 90% {
-        fill-opacity: 0
-    }
-    50%, 70% {
-        fill-opacity: 1
-    }
+  100%,
+  25%,
+  35%,
+  90% {
+    fill-opacity: 0;
+  }
+  50%,
+  70% {
+    fill-opacity: 1;
+  }
 }
 
 @keyframes fill_offset {
-    100%, 25%, 35%, 90% {
-        fill-opacity: 0
-    }
-    50%, 70% {
-        fill-opacity: 1
-    }
+  100%,
+  25%,
+  35%,
+  90% {
+    fill-opacity: 0;
+  }
+  50%,
+  70% {
+    fill-opacity: 1;
+  }
 }
 .drawsvg {
   position: absolute;
@@ -167,14 +187,14 @@ a {
   z-index: 200000;
 }
 #fade-text {
-  font-family: 'Cafe24Lovingu', cursive; font-size: 4em;
+  font-family: "Cafe24Lovingu", cursive;
+  font-size: 4em;
   font-weight: bold;
 }
 #particles-js {
   width: 100%;
   height: auto;
 }
-
 
 /* #header .header_text {
   font-size: 1rem;
@@ -238,6 +258,7 @@ a {
   margin: 0 auto;
   padding: 45px 0;
   text-align: center;
+  position: relative;
 }
 #cont01 .cont01_img figure {
   width: 30px;
@@ -292,6 +313,10 @@ a {
   width: 340px;
   height: auto;
   margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .call_popup .inner {
   width: 100%;
@@ -299,6 +324,7 @@ a {
   border-radius: 8px;
   font-weight: bold;
   font-size: 1rem;
+  position: relative;
 }
 .call_popup .inner .popup_header {
   background-color: rgb(249, 249, 249);
@@ -336,6 +362,11 @@ a {
   width: 12px;
   height: 12px;
   object-fit: cover;
+  margin-top: 8px;
+}
+.sms {
+  width: 15px !important;
+  height: 15px !important;
 }
 .call_popup .inner .popup_text .popup_sx .last {
   margin-bottom: 20px !important;
@@ -344,6 +375,21 @@ a {
 }
 .call_popup .inner .popup_text .popup_sx .last_2 {
   padding-bottom: 15px !important;
+}
+.call_popup .call_close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+.call_popup .call_close figure {
+  width: 20px;
+  height: 20px;
+}
+.call_popup .call_close figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #cont02 {
@@ -530,7 +576,6 @@ a {
   content: none !important;
 }
 
-
 #cont04 {
   width: 100%;
   height: auto;
@@ -592,11 +637,11 @@ a {
 
 /* 방명록 */
 #guestbook {
+  background-color: #fff;
   margin: 20px auto;
   max-width: 600px;
-  padding: 20px;
+  padding: 50px 25px;
   border: 1px solid #ffe8db;
-  background-color: inherit;
 }
 #guestbook h1 {
   font-size: 1.2rem;
@@ -622,8 +667,20 @@ a {
 }
 /* 방명록 작성란 */
 
+#guestbook {
+  width: 100%;
+}
+#modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 검정색 반투명 */
+  z-index: 999; /* 모달보다 낮은 우선순위 */
+}
 #guestbook-form {
-  width: 25%;
+  width: 35%;
   height: 448px;
   margin: 0 auto;
   display: flex;
@@ -638,6 +695,7 @@ a {
   align-items: center;
   z-index: 1000;
   border-radius: 5px;
+  border: 1px solid #333;
 }
 #guestbook-form h2 {
   font-size: 1.2rem;
@@ -650,11 +708,11 @@ a {
   border-bottom: 1px solid #ffdcb6;
 }
 #guestbook-form div input {
-  width: 72.5%;
+  width: 70.5%;
   height: 25px;
 }
 #guestbook-form div textarea {
-  width: 73%;
+  width: 70.5%;
   height: 100px;
 }
 #guestbook-form div:nth-child(2) {
@@ -672,7 +730,7 @@ a {
 #guestbook-form div:nth-child(4) label {
   font-size: 1rem;
   margin-right: 5px;
-  letter-spacing: 0.35em !important;
+  letter-spacing: 0.35rem !important;
 }
 #guestbook-form div:nth-child(4) div {
   width: 100% !important;
@@ -680,12 +738,15 @@ a {
   align-items: flex-start;
   border-bottom: none;
 }
-#name-char-count, #password-char-count, #message-char-count {
+#name-char-count,
+#password-char-count,
+#message-char-count {
   text-align: end;
   font-size: 1rem;
   margin-bottom: 15px;
 }
-#name-char-count, #password-char-count {
+#name-char-count,
+#password-char-count {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -696,6 +757,23 @@ a {
   border: 1px solid #777;
   border-radius: 5px;
   cursor: pointer;
+}
+#close-btn02 {
+  width: 20px !important;
+  height: 20px;
+  border: none !important;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+#close-btn02 figure {
+  width: 20px;
+  height: 20px;
+}
+#close-btn02 figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .guestbook-item {
@@ -854,7 +932,7 @@ a {
 
 /* cont06 */
 #cont06 {
-  background-color: #fff;
+  /* background-color: #fff; */
   margin: 0 auto;
   text-align: center;
 }
@@ -870,56 +948,278 @@ a {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-#cont06 .inner .man_dropdown {
+#cont06 .inner .dropdown {
   width: 80%;
   margin: 0 auto;
   text-align: left;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   position: relative;
   display: inline-block;
+  margin-bottom: 15px;
 }
-#cont06 .inner .man_dropdown button {
+.dropdown-button {
   width: 100%;
   background-color: transparent;
   border: 0;
-  text-align: left;
+  text-align: center;
   font-size: 1rem;
   font-family: inherit;
   padding: 10px;
   border: none;
   cursor: pointer;
+  background-color: #fff;
+  border-radius: 5px;
 }
-#cont06 .inner .man_dropdown p {
+#cont06 .inner .dropdown p {
   margin: 0;
 }
-.dropdown-content {
-  display: none; /* 숨김 상태 */
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+#cont06 .dropdown-content {
   display: block;
-}
-/* 드롭다운 콘텐츠 링크에 대한 호버 효과 */
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-/* 드롭다운 버튼을 호버할 때 콘텐츠 표시 */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.man_son {
+  position: relative;
   width: 100%;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  max-height: 0; /* 기본적으로 숨김 */
+  opacity: 0; /* 투명도 추가 */
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+#cont06 .dropdown-content.show {
+  max-height: 500px;
+  opacity: 1;
 }
 
+#cont06 .dropdox {
+  width: 100%;
+  padding: 15px;
+}
+#cont06 .dropdox .man_name {
+  display: flex;
+  justify-content: flex-start;
+  color: #4ca2fe;
+  font-weight: bold;
+}
+#cont06 .dropdox .woman_name {
+  display: flex;
+  justify-content: flex-start;
+  color: #fe964c;
+  font-weight: bold;
+}
+#cont06 .dropdox .man_name p,
+#cont06 .dropdox .woman_name p {
+  margin-right: 10px !important;
+}
+#man_bank,
+#woman_bank {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+
+#man_bank .btn_bank,
+#woman_bank .btn_bank {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#man_bank .btn_bank button:first-child,
+#woman_bank .btn_bank button:first-child {
+  margin-top: 0 !important;
+}
+#man_bank .btn_bank button,
+#woman_bank .btn_bank button {
+  width: 64px;
+  height: 26px;
+  margin-top: 10px;
+  background-color: transparent;
+  border: 1px solid #777;
+  border-radius: 5px;
+}
+#man_bank .btn_bank button a,
+#woman_bank .btn_bank button a {
+  text-decoration: none;
+  cursor: pointer;
+}
+#man_bank .btn_bank button a p,
+#woman_bank .btn_bank button a p {
+  font-family: var(--font-kr);
+}
+#man_bank .btn_bank button a figure,
+#woman_bank .btn_bank button a figure {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#man_bank .btn_bank button a figure img,
+#woman_bank .btn_bank button a figure img {
+  width: 100%;
+  height: 100%;
+}
 
 /* 반응형 */
+@media screen and (max-width: 1027px) {
+  #guestbook-form div input {
+    width: 74.5%;
+  }
+  #guestbook-form div:nth-child(3) label {
+    margin-right: 12px;
+  }
+  #guestbook-form div:nth-child(4) label {
+    margin-right: 14px;
+  }
+  #guestbook-form div textarea {
+    width: 73.5%;
+  }
+}
+@media screen and (max-width: 995px) {
+  #guestbook-form div:nth-child(2) label {
+    letter-spacing: 0.47rem;
+    margin-right: 15px;
+  }
+  #guestbook-form div:nth-child(3) label {
+    margin-right: 24px;
+  }
+  #guestbook-form div:nth-child(4) label {
+    margin-right: 23px;
+  }
+}
+@media screen and (max-width: 981px) {
+  #guestbook-form div input {
+    width: 70.5%;
+  }
+  #guestbook-form div:nth-child(2) label {
+    margin-right: 10px;
+  }
+  #guestbook-form div:nth-child(3) label {
+    margin-right: 18px;
+  }
+  #guestbook-form div:nth-child(4) label {
+    margin-right: 16px;
+  }
+}
+@media screen and (max-width: 981px) {
+  #guestbook-form div:nth-child(4) label {
+    letter-spacing: 0.32rem !important;
+  }
+}
+@media screen and (max-width: 969px) {
+  #guestbook-form div:nth-child(2) label {
+    margin-right: 0;
+  }
+  #guestbook-form div:nth-child(3) label {
+    margin-right: 10px;
+  }
+  #guestbook-form div input {
+    width: 73.5%;
+  }
+  #guestbook-form div textarea {
+    width: 72.5%;
+  }
+  #guestbook-form div:nth-child(4) label {
+    margin-right: 14px;
+  }
+}
+@media screen and (max-width: 889px) {
+  #guestbook-form div input {
+    width: 72.5%;
+  }
+  #guestbook-form div:nth-child(4) label {
+    letter-spacing: 0.25rem !important;
+  }
+}
+@media screen and (max-width: 857px) {
+  #guestbook-form div input {
+    width: 70.5%;
+  }
+  #guestbook-form div:nth-child(4) label {
+    letter-spacing: 0.15rem !important;
+    margin-right: 16px;
+  }
+}
+@media screen and (max-width: 819px) {
+  #guestbook-form div:nth-child(2) label {
+    letter-spacing: 0.4rem;
+  }
+  #guestbook-form div:nth-child(3) label {
+    margin-right: 3px;
+  }
+  #guestbook-form div textarea {
+    width: 74.5%;
+  }
+  #guestbook-form div:nth-child(4) label {
+    letter-spacing: 0rem !important;
+    margin-right: 14px;
+  }
+}
+@media screen and (max-width: 728px) {
+  #guestbook-form {
+    width: 48%;
+    height: 462px;
+  }
+  #guestbook-form div:nth-child(2) {
+    padding-top: 10px;
+  }
+  #guestbook-form div:nth-child(2) label,
+  #guestbook-form div:nth-child(3) label {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  #guestbook-form div:nth-child(3) label {
+    margin-top: 5px;
+  }
+  #guestbook-form div input {
+    width: 100%;
+  }
+  #guestbook-form div:nth-child(4) div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+  #guestbook-form div {
+    margin-bottom: 5px;
+  }
+  #guestbook-form div:nth-child(4) label {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+  }
+  #guestbook-form div:nth-child(4) label,
+  #guestbook-form div textarea {
+    width: 100%;
+  }
+  #name-char-count,
+  #password-char-count {
+    margin: 5px 0;
+  }
+  #name-char-count,
+  #password-char-count,
+  #message-char-count {
+    margin-bottom: 5px;
+  }
+  #close-btn {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 655px) {
+  #guestbook-form {
+    width: 54%;
+  }
+}
+@media screen and (max-width: 534px) {
+  #guestbook-form {
+    width: 66%;
+  }
+}
+@media screen and (max-width: 422px) {
+  #guestbook-form {
+    width: 85%;
+  }
+}
+
 @media screen and (max-width: 375px) {
   #header .header_img {
     width: 70%;
