@@ -40,3 +40,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const callButton = document.querySelector(".call button");
+    const callModal = document.querySelector(".call_popup");
+    const callCloseModal = document.querySelector(".call_close");
+
+    // 모달 열기
+    callButton.addEventListener("click", () => {
+      callModal.style.display = "flex";
+    });
+
+    // 모달 닫기
+    callCloseModal.addEventListener("click", () => {
+      callModal.style.display = "none";
+    });
+
+    // 모달 외부 클릭 시 닫기
+    callModal.addEventListener("click", (event) => {
+      if (event.target === callModal) {
+        callModal.style.display = "none";
+      }
+    });
+  });

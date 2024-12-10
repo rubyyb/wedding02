@@ -7,13 +7,6 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Cafe24Lovingu";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Lovingu.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
 
 @import url("//fastly.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css");
 
@@ -67,7 +60,7 @@ a {
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 /* 화면에 나타날 때 적용될 상태 */
@@ -102,7 +95,7 @@ a {
 
 .stroke {
   font-size: 45px;
-  stroke: #493628; 
+  stroke: #fff; 
   stroke-width: 1px; 
   stroke-dasharray: 0 250;
   stroke-opacity: 1; 
@@ -116,12 +109,13 @@ a {
 
 .fill {
   font-size: 45px;
-  fill: #493628;
+  fill: #ff5454;
   fill-opacity: 0;
   -webkit-animation: fill_offset 8s infinite;
   animation: fill_offset 8s infinite;
   -webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
   animation-timing-function: cubic-bezier(.25, .46, .45, .94)
+
 }
 
 @-webkit-keyframes stroke_offset {
@@ -238,6 +232,7 @@ a {
   margin: 0 auto;
   padding: 45px 0;
   text-align: center;
+  position: relative;
 }
 #cont01 .cont01_img figure {
   width: 30px;
@@ -292,6 +287,10 @@ a {
   width: 340px;
   height: auto;
   margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .call_popup .inner {
   width: 100%;
@@ -299,6 +298,7 @@ a {
   border-radius: 8px;
   font-weight: bold;
   font-size: 1rem;
+  position: relative;
 }
 .call_popup .inner .popup_header {
   background-color: rgb(249, 249, 249);
@@ -336,6 +336,7 @@ a {
   width: 12px;
   height: 12px;
   object-fit: cover;
+  margin-top: 8px;
 }
 .call_popup .inner .popup_text .popup_sx .last {
   margin-bottom: 20px !important;
@@ -344,6 +345,21 @@ a {
 }
 .call_popup .inner .popup_text .popup_sx .last_2 {
   padding-bottom: 15px !important;
+}
+.call_popup .call_close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+.call_popup .call_close figure {
+  width: 20px;
+  height: 20px;
+}
+.call_popup .call_close figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #cont02 {
@@ -592,11 +608,11 @@ a {
 
 /* 방명록 */
 #guestbook {
+  background-color: #fff;
   margin: 20px auto;
   max-width: 600px;
   padding: 20px;
   border: 1px solid #ffe8db;
-  background-color: inherit;
 }
 #guestbook h1 {
   font-size: 1.2rem;
@@ -854,7 +870,7 @@ a {
 
 /* cont06 */
 #cont06 {
-  background-color: #fff;
+  /* background-color: #fff; */
   margin: 0 auto;
   text-align: center;
 }
@@ -870,15 +886,16 @@ a {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-#cont06 .inner .man_dropdown {
+#cont06 .inner .dropdown {
   width: 80%;
   margin: 0 auto;
   text-align: left;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   position: relative;
   display: inline-block;
+  margin-bottom: 15px;
 }
-#cont06 .inner .man_dropdown button {
+.dropdown-button {
   width: 100%;
   background-color: transparent;
   border: 0;
@@ -889,34 +906,94 @@ a {
   border: none;
   cursor: pointer;
 }
-#cont06 .inner .man_dropdown p {
+#cont06 .inner .dropdown p {
   margin: 0;
 }
-.dropdown-content {
-  display: none; /* 숨김 상태 */
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+#cont06 .dropdown-content {
   display: block;
-}
-/* 드롭다운 콘텐츠 링크에 대한 호버 효과 */
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-/* 드롭다운 버튼을 호버할 때 콘텐츠 표시 */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.man_son {
+  position: relative;
   width: 100%;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  max-height: 0; /* 기본적으로 숨김 */
+  opacity: 0; /* 투명도 추가 */
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease; 
 }
+#cont06  .dropdown-content.show {
+  max-height: 500px; 
+  opacity: 1;
+}
+
+#cont06 .dropdox {
+  width: 100%;
+  padding: 15px;
+}
+#cont06 .dropdox .man_name {
+  display: flex;
+  justify-content: flex-start;
+  color: #4ca2fe;
+  font-weight: bold;
+}
+#cont06 .dropdox .woman_name {
+  display: flex;
+  justify-content: flex-start;
+  color: #fe964c;
+  font-weight: bold;
+}
+#cont06 .dropdox .man_name p,
+#cont06 .dropdox .woman_name p {
+  margin-right: 10px !important;
+}
+#man_bank, #woman_bank {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+
+#man_bank .btn_bank,
+#woman_bank .btn_bank {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#man_bank .btn_bank button:first-child,
+#woman_bank .btn_bank button:first-child {
+  margin-top: 0 !important;
+}
+#man_bank .btn_bank button,
+#woman_bank .btn_bank button {
+  width: 64px;
+  height: 26px;
+  margin-top: 10px;
+  background-color: transparent;
+  border: 1px solid #777;
+  border-radius: 5px;
+}
+#man_bank .btn_bank button a,
+#woman_bank .btn_bank button a {
+  text-decoration: none;
+  cursor: pointer;
+}
+#man_bank .btn_bank button a p,
+#woman_bank .btn_bank button a p {
+  font-family: var(--font-kr);
+}
+#man_bank .btn_bank button a figure,
+#woman_bank .btn_bank button a figure {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#man_bank .btn_bank button a figure img,
+#woman_bank .btn_bank button a figure img {
+  width: 100%;
+  height: 100%;
+}
+
+
 
 
 /* 반응형 */
