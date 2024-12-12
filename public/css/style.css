@@ -61,7 +61,7 @@ a {
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 /* 화면에 나타날 때 적용될 상태 */
@@ -116,6 +116,14 @@ svg {
   animation: fill_offset 8s infinite;
   -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+/* 반짝임 효과 추가 */
+#fade-text {
+  font-family: "Cafe24Lovingu", cursive;
+  font-size: 4em;
+  font-weight: bold;
+  filter: brightness(1);
+  animation: text_blink 2s infinite ease-in-out 6s; /* 6초 후 반짝임 시작 */
 }
 
 @-webkit-keyframes stroke_offset {
@@ -179,6 +187,16 @@ svg {
     fill-opacity: 1;
   }
 }
+
+/* 반짝임 효과 */
+@keyframes text_blink {
+  0%, 100% {
+    filter: brightness(1); /* 기본 밝기 */
+  }
+  50% {
+      filter: brightness(2.5); /* 더 밝게 반짝임 */
+  }
+}
 .drawsvg {
   position: absolute;
   bottom: 0;
@@ -196,55 +214,6 @@ svg {
   height: auto;
 }
 
-/* #header .header_text {
-  font-size: 1rem;
-  padding: 40px 0 0;
-}
-#header .header_text .header_name {
-  width: 60%;
-  margin: 0 auto;
-  margin-top: 15px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-around;
-}
-#header .header_img {
-  width: 80%;
-  height: 400px;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  background: url(../img/header.jpg) center center / 100% no-repeat;
-  border-radius: 50% 50% 0 0;
-  overflow: hidden;
-}
-#header .header_img p {
-  width: 100%;
-  height: 100%;
-}
-#header .header_last {
-  margin-bottom: 30px;
-}
-#header .header_last h1 {
-  font-family: var(--font-en);
-  font-size: 1.9rem;
-  font-weight: 300;
-}
-#header .header_last .header_day {
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  font-family: var(--font-kr);
-  font-size: 1rem;
-  margin-top: 15px;
-  letter-spacing: 1.1px;
-}
-#header .header_last .header_day p:first-child {
-  margin-bottom: 5px;
-} */
 
 /* ❤️❤️❤️main❤️❤️❤️ */
 #main {
@@ -317,6 +286,8 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 1px solid #bcbcbc;
+  z-index: 200000;
 }
 .call_popup .inner {
   width: 100%;
@@ -488,8 +459,8 @@ svg {
   width: 36px;
   height: 38px;
   position: absolute;
-  top: -10px;
-  right: -1px;
+  top: -11px;
+  right: -2px;
 }
 #cont02 .month_2 .month_day .day_2 .heart img {
   width: 100%;
@@ -638,7 +609,6 @@ svg {
 /* 방명록 */
 #guestbook {
   background-color: #fff;
-  margin: 20px auto;
   max-width: 600px;
   padding: 50px 25px;
   border: 1px solid #ffe8db;
@@ -1057,6 +1027,18 @@ svg {
   width: 100%;
   height: 100%;
 }
+
+#footer {
+  width: 100%;
+  background-color: #ffe8db;
+  box-sizing: 0 0 18px rgb(0 0 0 / 10%);
+}
+#footer p {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
 
 /* 반응형 */
 @media screen and (max-width: 1027px) {
