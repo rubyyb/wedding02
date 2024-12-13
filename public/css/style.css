@@ -43,7 +43,7 @@ body {
   user-select: none;
 }
 
-a {
+a, button {
   color: #333;
   list-style: none;
 }
