@@ -37,10 +37,20 @@ body {
   line-height: 1;
   font-size: 62.5%;
   font-family: var(--font-kr);
+  -webkit-user-select: none; /* 텍스트 선택 금지 */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 a {
   color: inherit;
+}
+
+img {
+  pointer-events: none; /* 클릭 금지 */
+  user-select: none;
+  -webkit-user-drag: none; /* 드래그 금지 */
 }
 
 #wrap {
@@ -190,11 +200,12 @@ svg {
 
 /* 반짝임 효과 */
 @keyframes text_blink {
-  0%, 100% {
+  0%,
+  100% {
     filter: brightness(1); /* 기본 밝기 */
   }
   50% {
-      filter: brightness(2.5); /* 더 밝게 반짝임 */
+    filter: brightness(2.5); /* 더 밝게 반짝임 */
   }
 }
 .drawsvg {
@@ -213,7 +224,6 @@ svg {
   width: 100%;
   height: auto;
 }
-
 
 /* ❤️❤️❤️main❤️❤️❤️ */
 #main {
@@ -815,6 +825,7 @@ svg {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
   text-align: center;
+  line-height: 1.2rem;
 }
 
 .guestbook-item {
@@ -1038,7 +1049,6 @@ svg {
   text-align: center;
   font-size: 1rem;
 }
-
 
 /* 반응형 */
 @media screen and (max-width: 1027px) {
