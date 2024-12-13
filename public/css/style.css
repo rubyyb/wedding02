@@ -44,7 +44,8 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #333;
+  list-style: none;
 }
 
 img {
@@ -1016,27 +1017,9 @@ svg {
   background-color: transparent;
   border: 1px solid #777;
   border-radius: 5px;
-}
-#man_bank .btn_bank button a,
-#woman_bank .btn_bank button a {
-  text-decoration: none;
+  font-family: inherit;
+  font-size: 1rem;
   cursor: pointer;
-}
-#man_bank .btn_bank button a p,
-#woman_bank .btn_bank button a p {
-  font-family: var(--font-kr);
-}
-#man_bank .btn_bank button a figure,
-#woman_bank .btn_bank button a figure {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  overflow: hidden;
-}
-#man_bank .btn_bank button a figure img,
-#woman_bank .btn_bank button a figure img {
-  width: 100%;
-  height: 100%;
 }
 
 #footer {
