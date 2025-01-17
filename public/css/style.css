@@ -1097,6 +1097,7 @@ svg {
   }
 }
 @media screen and (max-width: 889px) {
+  
   #guestbook-form div input {
     width: 72.5%;
   }

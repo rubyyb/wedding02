@@ -32,7 +32,7 @@ document
   .addEventListener("click", () => makeCall("01050154379"));
 document
   .getElementById("call_2")
-  .addEventListener("click", () => makeCall("01050154379"));
+  .addEventListener("click", () => makeCall("01053974592"));
 document
   .getElementById("call_3")
   .addEventListener("click", () => makeCall("01094394379"));
@@ -52,7 +52,7 @@ document
   .addEventListener("click", () => sendSMS("01050154379", ""));
 document
   .getElementById("sms_2")
-  .addEventListener("click", () => sendSMS("01050154379", ""));
+  .addEventListener("click", () => sendSMS("01053974592", ""));
 document
   .getElementById("sms_3")
   .addEventListener("click", () => sendSMS("01094394379", ""));
