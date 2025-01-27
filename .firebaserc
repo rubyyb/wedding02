@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "wedding02"
-  }
+    "default": "wedding02",
+    "wedding": "wedding02"
+  },
+  "targets": {},
+  "etags": {}
 }

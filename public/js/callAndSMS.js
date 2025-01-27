@@ -8,7 +8,9 @@ function isMobile() {
 // 전화 걸기 함수
 function makeCall(phoneNumber) {
   if (isMobile()) {
-    window.location.href = `tel:${phoneNumber}`;
+    const link = document.createElement("a");
+    link.href = `tel:${phoneNumber}`;
+    link.click();
   } else {
     alert("이 기능은 모바일 환경에서만 사용할 수 있습니다.");
   }
@@ -17,9 +19,9 @@ function makeCall(phoneNumber) {
 // 문자 보내기 함수
 function sendSMS(phoneNumber, message) {
   if (isMobile()) {
-    window.location.href = `sms:${phoneNumber}?body=${encodeURIComponent(
-      message
-    )}`;
+    const link = document.createElement("a");
+    link.href = `sms:${phoneNumber}?body=${encodeURIComponent(message)}`;
+    link.click();
   } else {
     alert("이 기능은 모바일 환경에서만 사용할 수 있습니다.");
   }

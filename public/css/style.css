@@ -43,7 +43,8 @@ body {
   user-select: none;
 }
 
-a, button {
+a,
+button {
   color: #333;
   list-style: none;
 }
@@ -131,8 +132,8 @@ svg {
 /* 반짝임 효과 추가 */
 #fade-text {
   font-family: "Cafe24Lovingu", cursive;
-  font-size: 4em;
-  font-weight: bold;
+  font-size: 4em; /* 화면 너비의 5% */
+  /* font-weight: 700; */
   filter: brightness(1);
   animation: text_blink 2s infinite ease-in-out 6s; /* 6초 후 반짝임 시작 */
 }
@@ -212,14 +213,9 @@ svg {
 .drawsvg {
   position: absolute;
   bottom: 0;
-  left: 50%;
-  margin-left: -208px;
+  /* left: 50%;
+  margin-left: -208px; */
   z-index: 200000;
-}
-#fade-text {
-  font-family: "Cafe24Lovingu", cursive;
-  font-size: 4em;
-  font-weight: bold;
 }
 #particles-js {
   width: 100%;
@@ -1097,7 +1093,6 @@ svg {
   }
 }
 @media screen and (max-width: 889px) {
-  
   #guestbook-form div input {
     width: 72.5%;
   }
